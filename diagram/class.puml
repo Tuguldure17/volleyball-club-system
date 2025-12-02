@@ -1,0 +1,86 @@
+@startuml 1
+title NATUR BUCKS Volleyball Club - Class Diagram
+
+skinparam classAttributeIconSize 0
+
+' ------------ Main System Class ------------
+class Child {
+  + id : int
+  + lastname : str
+  + firstname : str
+  + age : int
+  + level : str
+  + phone : str
+  + parent_phone : str
+  + registered_date : str
+}
+
+
+
+class VolleyballClub {
+  - children : list
+  - schedules : list
+  - payments : list
+  - current_user : dict
+
+  + __init__()
+  + load_data() 
+  + save_data() 
+  + clear_screen() 
+  + print_header(title)
+  + get_valid_choice(prompt, valid_choices)
+
+  + main_menu()
+
+  + admin_login()
+  + child_login()
+
+  + admin_menu()
+  + child_menu()
+
+  + add_child()
+  + delete_child()
+  + show_all_children(pause=True)
+  + search_child()
+
+  + create_schedule()
+  + update_schedule()
+  + show_schedules(pause=True, level=None)
+
+  + register_payment()
+  + show_payments()
+  + show_unpaid_children()
+  + show_child_info()
+}
+
+class Schedule {
+  + id : int
+  + date : str
+  + time : str
+  + location : str
+  + level : str
+  + created_date : str
+  + updated_date : str
+}
+' ------------ Data Models (JSON objects) ------------
+
+
+
+class Payment {
+  + id : int
+  + child_id : int
+  + child_name : str
+  + amount : int
+  + payment_type : str
+  + payment_date : str
+  + note : str
+}
+
+' ------------ Relations ------------
+
+VolleyballClub " 1" *-- "many" Schedule : manages >
+VolleyballClub "1" *-- "many" Payment : manages >
+VolleyballClub " 1" *-- "many" Child : manages >
+Child "1" o-- "many" Payment : has >
+
+@enduml

@@ -1,0 +1,22 @@
+@startuml 3
+title NATUR BUCKS Volleyball Club - Child Use Case Diagram
+
+skinparam shadowing true
+skinparam actorStyle awesome
+skinparam usecase {
+    BackgroundColor #F2F2F2
+    BorderColor #444444
+}
+left to right direction
+
+actor Child <<User>>
+
+usecase "UC02: Child Login" as UC02
+usecase "UC13: View Own Schedule" as UC13
+usecase "UC14: View Own Profile" as UC14
+
+Child --> UC02
+Child --> UC13
+Child --> UC14
+
+@enduml

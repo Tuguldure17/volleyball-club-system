@@ -1,0 +1,20 @@
+@startuml 2
+left to right direction
+actor Child
+
+rectangle "Volleyball Club System" {
+
+    usecase "UC_VIEW_SCHEDULE\nХуваарь харах" as UC1
+    usecase "Request Schedule" as UC1A
+    usecase "Filter Schedules by Level" as UC1B
+    usecase "Display Schedule List" as UC1C
+    usecase "Show Error\n(No schedules)" as UC1D
+
+    UC1 --> UC1A : <<include>>
+    UC1 --> UC1B : <<include>>
+    UC1 --> UC1C : <<include>>
+    UC1 --> UC1D : <<extend>>
+}
+
+Child --> UC1
+@enduml

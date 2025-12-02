@@ -1,0 +1,12 @@
+@startuml 4
+actor Child
+participant "ChildUI" as UI
+participant "ClubSystem" as CS
+participant "ScheduleList" as SL
+
+Child -> UI: request schedule
+UI -> CS: getSchedule(level)
+CS -> SL: filter(level)
+SL --> CS: filtered schedules
+CS -> Child: show schedule list
+@enduml
