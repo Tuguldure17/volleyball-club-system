@@ -1,0 +1,12 @@
+@startuml 3
+actor Admin
+participant "AdminUI" as UI
+participant "ClubSystem" as CS
+participant "JSON Storage" as DB
+
+Admin -> UI: enter child data
+UI -> CS: validate(age, fields)
+CS -> DB: save(child)
+DB --> CS: ok
+CS -> Admin: success message
+@enduml

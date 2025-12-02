@@ -1,0 +1,79 @@
+{
+  "children": [
+    {
+      "id": 1,
+      "lastname": "enhbayr",
+      "firstname": "tuguldut",
+      "age": 16,
+      "level": "Ахисан шат",
+      "phone": "87606661",
+      "parent_phone": "94129422",
+      "registered_date": "2025-12-02"
+    },
+    {
+      "id": 2,
+      "lastname": "bodio",
+      "firstname": "gunj",
+      "age": 34,
+      "level": "Анхан шат",
+      "phone": "88988998",
+      "parent_phone": "78787878",
+      "registered_date": "2025-12-02"
+    }
+  ],
+  "schedules": [
+    {
+      "id": 1,
+      "date": "2025-12-04",
+      "time": "19:00",
+      "location": "muis",
+      "level": "Ахисан шат",
+      "created_date": "2025-12-02 17:33:51",
+      "updated_date": "2025-12-02 23:22:02"
+    },
+    {
+      "id": 2,
+      "date": "2025",
+      "time": "0",
+      "location": "0",
+      "level": "Анхан шат",
+      "created_date": "2025-12-02 23:13:36"
+    },
+    {
+      "id": 3,
+      "date": "2025-12-03",
+      "time": "20:00",
+      "location": "Nuht Sport complex",
+      "level": "Бүгд",
+      "created_date": "2025-12-02 23:14:16"
+    },
+    {
+      "id": 4,
+      "date": "2025-12-07",
+      "time": "19:30",
+      "location": "orgil rashaan",
+      "level": "Дунд шат",
+      "created_date": "2025-12-03 01:21:49"
+    }
+  ],
+  "payments": [
+    {
+      "id": 1,
+      "child_id": 1,
+      "child_name": "enhbayr tuguldut",
+      "amount": 250000,
+      "payment_type": "Сар",
+      "payment_date": "2025-12-02",
+      "note": "tuguldyr 12 sariin tulburuu hiisen"
+    },
+    {
+      "id": 2,
+      "child_id": 2,
+      "child_name": "bodio gunj",
+      "amount": 120000,
+      "payment_type": "Сар",
+      "payment_date": "2025-12-02",
+      "note": "12 sariin tulbur amjilttai tulsun"
+    }
+  ]
+}

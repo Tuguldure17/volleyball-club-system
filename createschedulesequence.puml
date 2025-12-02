@@ -1,0 +1,21 @@
+@startuml 3
+title Sequence Diagram - Create Schedule
+
+actor Admin
+participant "Admin Menu" as Menu
+participant "VolleyballClub" as VC
+participant "data.json" as DB
+
+Admin -> Menu : Сонголт = "Create Schedule"
+Menu -> VC : create_schedule()
+
+VC -> Admin : Огноо, цаг, байршил, түвшин асуух
+Admin --> VC : Schedule info
+
+VC -> VC : Хуваарийн объект үүсгэх
+VC -> DB : save_data()
+DB --> VC : ОК
+
+VC --> Admin : "Хуваарь амжилттай үүсгэгдлээ!"
+
+@enduml

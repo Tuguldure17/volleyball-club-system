@@ -1,0 +1,22 @@
+@startuml 1
+left to right direction
+actor Admin
+
+rectangle "Volleyball Club System" {
+
+    usecase "UC_ADD_CHILD\nХүүхэд бүртгэх" as UC2
+    usecase "Enter Child Information" as UC2A
+    usecase "Validate Input\n(Нас 6-18 эсэх)" as UC2B
+    usecase "Save to JSON\n(Өгөгдөл хадгалах)" as UC2C
+    usecase "Show Success Message" as UC2D
+    usecase "Show Error Message\n(Буруу оролт)" as UC2E
+
+    UC2 --> UC2A : <<include>>
+    UC2 --> UC2B : <<include>>
+    UC2 --> UC2C : <<include>>
+    UC2 --> UC2D : <<include>>
+    UC2 --> UC2E : <<extend>>
+}
+
+Admin --> UC2
+@enduml

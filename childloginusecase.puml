@@ -1,0 +1,10 @@
+@startuml 2
+left to right direction
+actor Child
+
+rectangle "Volleyball Club System" {
+    usecase "UC_CHILD_LOGIN\nХүүхэд нэвтрэх" as UC01
+}
+
+Child --> UC01
+@enduml
